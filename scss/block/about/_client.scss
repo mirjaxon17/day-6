@@ -1,0 +1,54 @@
+// client
+
+.client {
+    padding-block: 140px;
+    background-color: var(--sacramento-state-green);
+    background-image: url(../../../img/clients-bg.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.client__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 64px;
+}
+
+.client__list {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1140px) {
+    .client {
+        background-position: top -100px left;
+        padding-block: 100px;
+    }
+
+    .client__title {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 54px;
+    }
+
+    .client__list {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .client {
+        background-position: top -100px left -100px;
+        padding-block: 88px;
+    }
+
+    .client__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

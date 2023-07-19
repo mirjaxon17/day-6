@@ -1,0 +1,114 @@
+// manage
+
+.manage {
+    background-color: var(--sacramento-state-green);
+    padding-block: 198px 140px;
+    background-image: url(../img/manage__background_img.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.manage__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.manage__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    max-width: 445px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        transform: translateY(-54px);
+        width: 50px;
+        height: 4px;
+        background-color: var(--light-coral);
+    }
+}
+
+.manage__item {
+    max-width: 478px;
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.manage__img {
+    width: 72px;
+    height: 72px;
+    margin-right: 23px;
+}
+
+.manage__sub_title {
+    color: var(--light-coral);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.manage__sub_text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 1340px) {
+    .manage {
+        background-position: top right;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .manage {
+        padding-block: 136px 100px;
+    }
+
+    .manage__container {
+        flex-direction: column;
+    }
+
+    .manage__title {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 64px;
+    }
+
+    .manage__container {
+        padding-inline: 98px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .manage {
+        padding-block: 100 64px;
+    }
+
+    .manage__title {
+        max-width: 234px;
+    }
+
+    .manage__img {
+        margin: 0;
+    }
+
+    .manage__span {
+        margin-bottom: 16px;
+    }
+
+    .manage__item {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .manage__container {
+        padding-inline: 20px;
+    }
+}

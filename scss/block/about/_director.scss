@@ -1,0 +1,176 @@
+// director
+
+.director {
+    background-color: var(--deep-jungle-blue);
+    background-image: url(../../../img/director_bg.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.director_bg {
+    padding-block: 140px;
+    background-image: url(../../../img/director__bg2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.director__title {
+    text-align: center;
+    margin-bottom: 64px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.director__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 73px;
+    column-gap: 30px;
+}
+
+.director__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height: 253px;
+    background-color: var(--sacramento-state-green);
+
+    &:hover {
+        background-color: var(--dark-green);
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-image: url(../../../img/person1.png);
+        background-repeat: no-repeat;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(../../../img/person2.png);
+    }
+
+    &:nth-child(3)::before {
+        background-image: url(../../../img/person3.png);
+    }
+
+    &:nth-child(4)::before {
+        background-image: url(../../../img/person4.png);
+    }
+
+    &:nth-child(5)::before {
+        background-image: url(../../../img/person5.png);
+    }
+
+    &:nth-child(6)::before {
+        display: none;
+    }
+}
+
+.director__check {
+    width: 56px;
+    height: 56px;
+    transform: translateY(28px);
+    opacity: 0;
+    z-index: 1;
+    transition: all .4s ease;
+}
+
+.director__btn {
+    width: 56px;
+    height: 56px;
+    background-image: url(../../../img/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(28px);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    transition: all .4s ease;
+}
+
+.director__check:checked~.director__btn {
+    background-image: url(../../../img/x_icon.svg);
+    transform: rotate(180deg, 0);
+}
+
+.director__btn--active {
+    transform: translateY(27px);
+}
+
+.director__name {
+    color: var(--rapture--blue);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.director__job {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.director__text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    max-width: 254px;
+    margin-bottom: 24px;
+}
+
+.director__sub_content {
+    margin-top: 25px;
+
+    &::after {
+        content: "";
+        display: block;
+        max-width: 60px;
+        height: 20px;
+        background-image: url(../../../img/director__icon_list.svg);
+        margin: 0 auto;
+    }
+}
+
+.last__name {
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1150px) {
+    .director_bg {
+        padding-block: 100px 128px;
+    }
+
+    .director__list {
+        justify-content: center;
+        column-gap: 11px;
+    }
+
+    .director__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .director {
+        background-position: top -100px left;
+    }
+
+    .director_bg {
+        padding-block: 88px 116px;
+    }
+}

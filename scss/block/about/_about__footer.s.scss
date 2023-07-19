@@ -1,0 +1,141 @@
+// footer
+
+.footer {
+    padding-block: 48px;
+    background-color: var(--dark-green);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer__logo_block {
+    display: flex;
+}
+
+.footer__block {
+    margin-right: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer__logo_link {
+    margin-bottom: 25px;
+}
+
+.footer__list {
+    display: flex;
+    gap: 40px;
+}
+
+.footer__link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+
+    &:hover {
+        color: var(--light-coral);
+        ;
+    }
+}
+
+.footer__address,
+.footer__tel,
+.footer__text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    opacity: 0.6;
+}
+
+.footer__icon_block {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.footer__icon_list {
+    width: 104px;
+    height: 24px;
+    background-image: url(../../img/icons.svg);
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width: 880px) {
+    .footer {
+        padding-block: 56px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer__logo_link {
+        width: 96px;
+    }
+
+    .footer__logo_block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: end;
+        margin-bottom: 32px;
+    }
+
+    .footer__icon_block {
+        flex-direction: row;
+        align-items: start;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer__icon_list {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .footer {
+        padding-block: 66px;
+    }
+
+    .footer__logo_block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .footer__call_us {
+        text-align: center;
+    }
+
+    .footer__block {
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+
+    .footer__icon_block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__icon_list {
+        margin-bottom: 16px;
+    }
+
+    .footer__list {
+        gap: 24px;
+    }
+
+    .footer__link {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}

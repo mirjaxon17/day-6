@@ -1,0 +1,123 @@
+// story
+
+.story {
+    background-color: var(--deep-jungle-blue);
+    background-image: url(../img/story__background_top.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.story__block {
+    background-image: url(../img/story__background_bottom.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-block: 140px;
+}
+
+.story__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    max-width: 932px;
+    margin: 0 auto;
+    margin-bottom: 92px;
+}
+
+.story__span {
+    color: var(--rapture--blue);
+}
+
+.story__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story__item {
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 67px;
+        height: 56px;
+        background-image: url(../img/quote.svg);
+        transform: translateY(-35px);
+    }
+
+    &::after {
+        content: "";
+        width: 68px;
+        height: 68px;
+        background-image: url(../img/kady.png);
+        background-repeat: no-repeat;
+        margin-top: 32px;
+    }
+
+    &:nth-child(2)::after {
+        background-image: url(../img/aiysha.png);
+    }
+
+    &:last-child::after {
+        background-image: url(../img/artur.png);
+    }
+}
+
+.story__sub_text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 24px;
+    z-index: 1;
+}
+
+.story__name {
+    color: var(--rapture--blue);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 2px;
+}
+
+.story__job {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 1100px) {
+    .story__block {
+        padding-block: 120px;
+    }
+
+    .story__list {
+        flex-direction: column;
+    }
+
+    .story__item:not(:last-child) {
+        margin-bottom: 84px;
+    }
+
+    .story__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .story__block {
+        padding-block: 140px;
+    }
+
+    .story__title {
+        max-width: 327px;
+    }
+}
